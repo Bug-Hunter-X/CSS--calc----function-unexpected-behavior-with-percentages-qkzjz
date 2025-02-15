@@ -1,0 +1,7 @@
+The CSS property `calc()` is used to perform calculations on CSS values. However, there is a common error that occurs when using the `calc()` function with percentages and other units. In some cases, the calculation is not performed as expected, resulting in unexpected results. For example, the following code will not work as expected: 
+```css
+#element {
+  width: calc(50% + 10px);
+}
+```
+This is because the `calc()` function does not always handle percentages correctly.  Sometimes the browser might treat the percentage as a value that's not relative to its parent container's width. This frequently happens when the `calc()` function is nested within other CSS properties or when dealing with complex layouts.
